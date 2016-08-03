@@ -1,0 +1,17 @@
+12-07-16 : 0.1.0 : 
+-Primera versión de mongoGenerator.
+-Generación básica de modelos.
+
+14-07-16 : 0.2.0 : 
+-Propiedad booleana es agregada
+
+22-07-16 : 0.3.0 : 
+-Retorno del id de inserción.
+-Siempre se va a poder obtener o editar el Id. En el caso en que no se tenga llave primaria, mongodb establecerá la llave y sólo se podra leer. En caso de tener llave primaria y que no sea autoincrementable, se podrá leer y establecer al valor que se desee bajo responsabilidad del programador. En caso de tener llave primaria y que sea autoincrementable, sólo se podra leer pero será en secuencia ascendente que se establezca internamente.
+-Se establecen los métodos para conteo, borrado y listado.
+-Método para querys.
+-Método para obtener un campo mediante el token del diccionario.
+
+02-08-16 : 0.4.0 :
+-Se estandarizan las operaciones como CRUD (Create, Read, Update, Delete).
+-Se utiliza la clase Counter de collection para poder realizar los updates. Por lo mismo, se divide el diccionario data.
