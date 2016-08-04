@@ -14,11 +14,12 @@ class ModelGenerator:
 		self.PROJECT_DIR = os.getcwd()
 	
 	def generateEntities(self):
-		schema = Schema('mongodbtest3')
+		schema = Schema('mongodbtest6')
 		
 		memTemplate = schema.addEntity('Users')
-		#memTemplate.addIdProperty(is_auto = True)
+		memTemplate.addIdProperty(is_auto = False)
 		memTemplate.addStringProperty('Name')
+		memTemplate.addListProperty('Subs')
 		#memTemplate.addBoolProperty('IsValid')
 		
 		#try:

@@ -22,11 +22,11 @@ class EntityGenerator:
 		model_file.close()
 	
 	def _generateModelHeader(self, model_file):
-		model_file.write('from collections import Counter\n\n')
+		#model_file.write('from collections import Counter\n\n')
 		model_file.write('class ' + self.__entity.getName() + ':\n')
 		model_file.write('\tdef __init__(self):\n')
-		model_file.write('\t\tself.__id = Counter({\"_id\" : 0})\n')
-		model_file.write('\t\tself.__data = Counter({')
+		model_file.write('\t\tself.__id = {\"_id\" : 0}\n')
+		model_file.write('\t\tself.__data = {')
 		
 	def _generateModelData(self, model_file):
 		#if (self.__entity.getIsPrimaryKey()):
@@ -44,7 +44,10 @@ class EntityGenerator:
 		for p in self.__entity.getBoolProperties():
 			model_file.write('\"' + p + '\" : False, ')
 			
-		model_file.write('})\n\n')
+		for p in self.__entity.getListProperties():
+			model_file.write('\"' + p + '\" : [], ')
+			
+		model_file.write('}\n\n')
 		
 	def _generateModelMethods(self, model_file):
 		
@@ -55,7 +58,8 @@ class EntityGenerator:
 		model_file.write('\t\treturn self.__data\n\n')
 		
 		model_file.write('\tdef getComposedData(self):\n')
-		model_file.write('\t\treturn self.__id + self.__data\n\n')
+		#model_file.write('\t\treturn self.__id + self.__data\n\n')
+		model_file.write('\t\treturn dict(self.__id, **self.__data)\n\n') 
 		
 		model_file.write('\tdef getField(self, token):\n')
 		model_file.write('\t\treturn self.__data[token]\n\n')
@@ -96,4 +100,14 @@ class EntityGenerator:
 			model_file.write('\t\treturn self.__data[\'' + p + '\']\n\n')
 			model_file.write('\tdef set' + p + '(self, ' + p + '):\n')
 			model_file.write('\t\tself.__data[\'' + p + '\'] = ' + p + '\n\n')
+			
+		for p in self.__entity.getListProperties():
+			model_file.write('\tdef add' + p + '(self, ' + p + '):\n')
+			model_file.write('\t\tself.__data[\'' + p + '\'].append(' + p + ')\n\n')
+			model_file.write('\tdef remove' + p + '(self, index):\n')
+			model_file.write('\t\treturn self.__data[\'' + p + '\'].remove(index)\n\n')
+			model_file.write('\tdef get' + p + '(self, index):\n')
+			model_file.write('\t\treturn self.__data[\'' + p + '\'][index]\n\n')
+			model_file.write('\tdef set' + p + '(self, index, ' + p + '):\n')
+			model_file.write('\t\tself.__data[\'' + p + '\'][index] = ' + p + '\n\n')	
 	

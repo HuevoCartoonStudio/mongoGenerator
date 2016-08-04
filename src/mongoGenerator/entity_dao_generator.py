@@ -42,6 +42,9 @@ class EntityDaoGenerator:
 			model_dao_file.write('\t\telse:\n')
 			model_dao_file.write('\t\t\tentity.setId(0)\n')
 			model_dao_file.write('\t\treturn self.__table.insert(entity.getComposedData())\n\n')
+		elif(not self.__entity.getIsAuto()):
+			#model_dao_file.write('\t\t))\n')
+			model_dao_file.write('\t\treturn self.__table.insert(entity.getComposedData())\n\n')
 		else:
 			model_dao_file.write('\t\tentity.setId(self.__table.insert(entity.getData()))\n')
 			model_dao_file.write('\t\treturn entity.getId()\n\n')
@@ -87,6 +90,12 @@ class EntityDaoGenerator:
 			model_dao_file.write('\t\tinstance.set' + p + '(json_doc.get(\'' + p + '\'))\n')
 		for p in self.__entity.getBoolProperties():
 			model_dao_file.write('\t\tinstance.set' + p + '(json_doc.get(\'' + p + '\'))\n')
+		for p in self.__entity.getListProperties():
+			#model_dao_file.write('\t\tinstance.set' + p + '(json_doc.get(\'' + p + '\'))\n')
+			model_dao_file.write('\t\tfor i in json_doc.get(\'' + p + '\'):\n')
+			model_dao_file.write('\t\t\tinstance.add' + p + '(i)\n')
+			
+			
 		model_dao_file.write('\n')
 		
 		#_mapJSONToNewInstance

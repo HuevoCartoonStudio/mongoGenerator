@@ -15,3 +15,7 @@
 02-08-16 : 0.4.0 :
 -Se estandarizan las operaciones como CRUD (Create, Read, Update, Delete).
 -Se utiliza la clase Counter de collection para poder realizar los updates. Por lo mismo, se divide el diccionario data.
+
+03-08-16 : 0.5.0 :
+-Posibilidad de subir listas en los documentos.
+-Seteo del id.

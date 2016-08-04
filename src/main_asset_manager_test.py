@@ -12,20 +12,20 @@ if __name__ == "__main__":
 	dao_session = dao_master.getSession()
 	items_dao = dao_session.getItemsDao()
 	
-	for i in range(10):
-		item = Items()
-		item.setName('Name_' + str(i))
-		item.setPath('Path_' + str(i))
-		item.setAssetSubscription('AssetSubscription_' + str(i))
-		item.setSuperAssetSubscription('SuperAssetSubscription_' + str(i))
-		item.setDigitalMediaSubscription('DigitalMediaSubscription_' + str(i))
-		item.setArtSubscription('ArtSubscription_' + str(i))
-		item.setUserSubscription('UserSubscription_' + str(i))
-		item.setType('Type_' + str(i))
-		item.setFormat('Format_' + str(i))
-		item.setStatus(i)
-		item.setVersion(float(i))
-		items_dao.create(item)
+	#for i in range(100000):
+		#item = Items()
+		#item.setName('Name_' + str(i))
+		#item.setPath('Path_' + str(i))
+		#item.setAssetSubscription('AssetSubscription_' + str(i))
+		#item.setSuperAssetSubscription('SuperAssetSubscription_' + str(i))
+		#item.setDigitalMediaSubscription('DigitalMediaSubscription_' + str(i))
+		#item.setArtSubscription('ArtSubscription_' + str(i))
+		#item.setUserSubscription('UserSubscription_' + str(i))
+		#item.setType('Type_' + str(i))
+		#item.setFormat('Format_' + str(i))
+		#item.setStatus(i)
+		#item.setVersion(float(i))
+		#items_dao.create(item)
 	
 	#print ('Count ' + str(items_dao.count()))
 	
@@ -47,8 +47,8 @@ if __name__ == "__main__":
 	#if (a is ''):
 		#print ('is empty')
 		
-	#test_all = items_dao.readAll()
+	test_all = items_dao.readAll()
 	
-	#for i in range(len(test_all)):
-		#test_all[i].setName('Namesito_' + str(i))
-		#items_dao.update(test_all[i])
+	for i in range(len(test_all)):
+		test_all[i].setName('Namesito_' + str(i))
+		items_dao.update(test_all[i])

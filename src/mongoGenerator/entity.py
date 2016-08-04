@@ -7,6 +7,7 @@ class Entity:
 		self.__float_properties = []
 		self.__string_properties = []
 		self.__bool_properties = []
+		self.__list_properties = []
 	
 	def getName(self):
 		return self.__name
@@ -27,6 +28,9 @@ class Entity:
 	def addBoolProperty(self, name):
 		self.__bool_properties.append(name)
 		
+	def addListProperty(self, name):
+		self.__list_properties.append(name)
+		
 	def getIsPrimaryKey(self):
 		return self.__is_primary_key
 	
@@ -44,3 +48,6 @@ class Entity:
 	
 	def getBoolProperties(self):
 		return self.__bool_properties
+	
+	def getListProperties(self):
+		return self.__list_properties
