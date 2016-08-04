@@ -8,6 +8,7 @@ class Entity:
 		self.__string_properties = []
 		self.__bool_properties = []
 		self.__list_properties = []
+		self.__is_auto = False
 	
 	def getName(self):
 		return self.__name

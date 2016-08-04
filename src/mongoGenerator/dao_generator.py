@@ -9,6 +9,9 @@ from session_generator import SessionGenerator
 #from dao_master_generator import daoMasterGenerator
 
 class DaoGenerator:
+	def __init__(self):
+		pass
+
 	def generateAll(self, schema, directory):
 		#print ('hello')
 		

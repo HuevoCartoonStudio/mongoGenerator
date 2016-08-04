@@ -1,71 +1,27 @@
-import sys
-
-sys.path.insert(0, './mongoGenerator/')
-
 from dao_generator import DaoGenerator
 from entity import Entity
 from schema import Schema
 
 import os
 
+
 class ModelGenerator:
-	
-	def __init__(self):
-		self.PROJECT_DIR = os.getcwd()
-	
-	def generateEntities(self):
-		schema = Schema('mongodbtest6')
-		
-		memTemplate = schema.addEntity('Users')
-		memTemplate.addIdProperty(is_auto = False)
-		memTemplate.addStringProperty('Name')
-		memTemplate.addListProperty('Subs')
-		#memTemplate.addBoolProperty('IsValid')
-		
-		#try:
-		daoGenerator = DaoGenerator()
-		daoGenerator.generateAll(schema, self.PROJECT_DIR + '/test/model')
-		#except:
-			#print(sys.exc_info()[0])
-			#raise
+    def __init__(self):
+        self.PROJECT_DIR = os.getcwd()
 
-        #memInfGen = schema.addEntity('MemorandumInformationGeneral')
-        #memInfGen.addIdProperty().autoincrement().primaryKey()
-        #memInfGen.addLongProperty('idMemo')
-        #memInfGen.addStringProperty('title')
-        #memInfGen.addStringProperty('company')
-        #memInfGen.addStringProperty('place')
-        #memInfGen.addStringProperty('objective')
+    def generate_entities(self):
+        schema = Schema('mongodbtest6')
 
-        #memInfPar = schema.addEntity('MemorandumInformationParticipants')
-        #memInfPar.addIdProperty().autoincrement().primaryKey()
-        #memInfPar.addLongProperty('idMemo')
-        #memInfPar.addStringProperty('participant')
-        #memInfPar.addStringProperty('participantMail')
+        doc_template = schema.addEntity('Users')
+        doc_template.addIdProperty(is_auto=False)
+        doc_template.addStringProperty('Name')
+        doc_template.addListProperty('Subs')
+        # memTemplate.addBoolProperty('IsValid')
 
-        #memInfTkp = schema.addEntity('MemorandumInformationTalkingpoints')
-        #memInfTkp.addIdProperty().autoincrement().primaryKey()
-        #memInfTkp.addLongProperty('idMemo')
-        #memInfTkp.addStringProperty('talkingPoint')
-
-        #memInfAgr = schema.addEntity('MemorandumInformationAgreements')
-        #memInfAgr.addIdProperty().autoincrement().primaryKey()
-        #memInfAgr.addLongProperty('idMemo')
-        #memInfAgr.addStringProperty('agreements')
-
-        #memInfPen = schema.addEntity('MemorandumInformationPendings')
-        #memInfPen.addIdProperty().autoincrement().primaryKey()
-        #memInfPen.addLongProperty('idMemo')
-        #memInfPen.addStringProperty('pendings')
-        
-        
+        # try:
+        dao_generator = DaoGenerator()
+        dao_generator.generateAll(schema, self.PROJECT_DIR + '/test/model')
 
 
 if __name__ == "__main__":
-	ModelGenerator().generateEntities()
-
-
-
-
-
-	
+    ModelGenerator().generate_entities()
