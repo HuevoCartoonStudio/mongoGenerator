@@ -2,12 +2,16 @@ from schema import Schema
 
 
 class MasterGenerator:
-	def __init__(self, schema, directory):
+	def __init__(self, schema, directory, address):
 		self.__schema = schema
 		self.__directory = directory
+		self.__address = address
 	
-	def setSchema(self):
-		return self.__schema
+	def setSchema(self, schema):
+		self.__schema = schema
+
+	def setAddress(self, address):
+		self.__address = address
 
 	def generate(self):
 		self._generateMaster()
@@ -25,7 +29,7 @@ class MasterGenerator:
 		model_file.write('\n\nfrom DaoSession import DaoSession')
 		model_file.write('\n\nclass DaoMaster:')
 		model_file.write('\n\tdef __init__(self):')
-		model_file.write('\n\t\tself.__client = MongoClient(\'localhost:27017\')')
+		model_file.write('\n\t\tself.__client = MongoClient(\'' + self.__address + '\')')
 		model_file.write('\n\t\tself.__db = self.__client.' + self.__schema.getName())
 		
 	def _generateMasterSession(self, model_file):

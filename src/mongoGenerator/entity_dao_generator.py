@@ -24,16 +24,14 @@ class EntityDaoGenerator:
 		model_dao_file.write('import pymongo\n')
 		model_dao_file.write('from pymongo import MongoClient\n\n')
 		model_dao_file.write('from '  + self.__entity.getName() +  ' import ' + self.__entity.getName() + '\n\n')
+		model_dao_file.write('from '  + self.__entity.getName() +  'Properties import ' + self.__entity.getName() + 'Properties\n\n')
 		model_dao_file.write('class ' + self.__entity.getName() + 'Dao:\n')
 		model_dao_file.write('\tdef __init__(self, table):\n')
-		model_dao_file.write('\t\tself.__table = table\n\n')
+		model_dao_file.write('\t\tself.__table = table\n')
+		model_dao_file.write('\t\tself.Properties = ' + self.__entity.getName() + 'Properties()\n\n')
 		
 	def _generateModelDaoMethods(self, model_dao_file):
-		#Method Count
-		model_dao_file.write('\tdef count(self):\n')
-		model_dao_file.write('\t\treturn self.__table.count()\n\n')
-		
-		#Method Insert
+		#Methods Create
 		model_dao_file.write('\tdef create(self, entity):\n')
 		if (self.__entity.getIsPrimaryKey() and self.__entity.getIsAuto()):
 			model_dao_file.write('\t\tif (self.count() is not 0):\n')
@@ -49,31 +47,60 @@ class EntityDaoGenerator:
 			model_dao_file.write('\t\tentity.setId(self.__table.insert(entity.getData()))\n')
 			model_dao_file.write('\t\treturn entity.getId()\n\n')
 			#model_dao_file.write('\t\treturn self.__table.insert(entity.getData())')
-		
-		#Method Update
-		model_dao_file.write('\tdef update(self, entity):\n')
-		#model_dao_file.write('\t\treturn self.__table.update(entity.getData())\n\n')
-		model_dao_file.write('\t\treturn self.__table.update(entity.getIdData(), {\'$set\':entity.getData()})\n\n')
-		
-		#Method GetFirst
-		model_dao_file.write('\tdef readFirst(self):\n')
+
+		model_dao_file.write('\tdef createCollection(self, collection):\n')
+		model_dao_file.write('\t\tfor c in collection:\n')
+		model_dao_file.write('\t\t\tself.create(c)\n\n')
+
+		#Methods Read
+		model_dao_file.write('\tdef readCollection(self, query):\n')
+		model_dao_file.write('\t\treturn self._cursorToList(self.__table.find(query))\n\n')
+
+		model_dao_file.write('\tdef readOne(self, query):\n')
+		model_dao_file.write('\t\ttemp = self.__table.find_one(query)\n')
+		model_dao_file.write('\t\ttemp_instance = ' + self.__entity.getName() + '()\n')
+		model_dao_file.write('\t\tself._mapJSONToInstance(temp, temp_instance)\n')
+		model_dao_file.write('\t\treturn temp_instance\n\n')
+
+		model_dao_file.write('\tdef readOneByPropertie(self, propertie, value):\n')
+		model_dao_file.write('\t\treturn self.readOne({propertie:value})\n\n')
+
+		model_dao_file.write('\tdef readRandom(self):\n')
 		model_dao_file.write('\t\ttemp = self.__table.find_one()\n')
 		model_dao_file.write('\t\ttemp_instance = ' + self.__entity.getName() + '()\n')
 		model_dao_file.write('\t\tself._mapJSONToInstance(temp, temp_instance)\n')
 		model_dao_file.write('\t\treturn temp_instance\n\n')
-		
-		#Method getAll
-		model_dao_file.write('\tdef readAll(self):\n') 
+
+		model_dao_file.write('\tdef readAll(self):\n')
 		model_dao_file.write('\t\treturn self._cursorToList(self.__table.find())\n\n')
-		
-		#Method removeAll
-		model_dao_file.write('\tdef deleteAll(self):\n')
-		model_dao_file.write('\t\tresult = self.__table.remove({})\n\n')
-		
-		#Method getByQuery
+
 		model_dao_file.write('\tdef readByQuery(self, query):\n')
 		model_dao_file.write('\t\treturn self._cursorToList(self.__table.find(query))\n\n')
 		
+		#Methods Update
+		model_dao_file.write('\tdef update(self, entity):\n')
+		#model_dao_file.write('\t\treturn self.__table.update(entity.getData())\n\n')
+		model_dao_file.write('\t\treturn self.__table.update(entity.getIdData(), {\'$set\':entity.getData()})\n\n')
+
+		model_dao_file.write('\tdef updateCollection(self, collection):\n')
+		model_dao_file.write('\t\tfor c in collection:\n')
+		model_dao_file.write('\t\t\tself.update(c)\n\n')
+
+		#Methods Delete
+		model_dao_file.write('\tdef deleteAll(self):\n')
+		model_dao_file.write('\t\tresult = self.__table.remove({})\n\n')
+
+		model_dao_file.write('\tdef delete(self, entity):\n')
+		model_dao_file.write('\t\tresult = self.__table.remove(entity.getIdData())\n\n')
+
+		model_dao_file.write('\tdef deleteCollection(self, collection):\n')
+		model_dao_file.write('\t\tfor c in collection:\n')
+		model_dao_file.write('\t\t\tself.delete(c)\n\n')
+
+		#Methods Misc
+		model_dao_file.write('\tdef count(self):\n')
+		model_dao_file.write('\t\treturn self.__table.count()\n\n')
+
 		model_dao_file.write('\tdef getFieldCount(self):\n')
 		model_dao_file.write('\t\treturn ' + str(len(self.__entity.getBoolProperties()) + len(self.__entity.getIntProperties()) + len(self.__entity.getFloatProperties()) + len(self.__entity.getStringProperties())) + '\n\n') 
 	

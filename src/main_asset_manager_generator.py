@@ -14,10 +14,13 @@ class ModelGenerator:
 		self.PROJECT_DIR = os.getcwd()
 	
 	def generateEntities(self):
-		schema = Schema('assetmanagerdb')
+		schema = Schema('testMongoGen')
+
+		# query = {'Field': {'$gt': 0, '$lt': 2}}
+		# db.Items.find({"Status": {$gt:0, $lt:2, $ne:0}}).pretty()
 		
 		memTemplate = schema.addEntity('Items')
-		#memTemplate.addIdProperty(is_auto = True)
+		memTemplate.addIdProperty(is_auto = False)
 		memTemplate.addStringProperty('Name')
 		memTemplate.addStringProperty('Path')
 		memTemplate.addStringProperty('AssetSubscription')
@@ -63,7 +66,7 @@ class ModelGenerator:
 		memTemplate.addIntProperty('Status')
 		
 		daoGenerator = DaoGenerator()
-		daoGenerator.generateAll(schema, self.PROJECT_DIR + '/test/model')
+		daoGenerator.generateAll(schema, self.PROJECT_DIR + '/test/model', '192.168.0.189:20017')
 
 
 if __name__ == "__main__":
