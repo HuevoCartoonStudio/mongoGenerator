@@ -12,7 +12,7 @@ class SessionGenerator:
 		self._generateSession()
 		
 	def _generateSession(self):
-		model_file = open(self.__directory + "/DaoSession.py", "wb")
+		model_file = open(self.__directory + "/" + self.__schema.getName() + "_DaoSession.py", "wb")
 			
 		self._generateSessionHeader(model_file)
 		self._generateSessionMethods(model_file)

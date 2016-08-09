@@ -25,27 +25,27 @@ class EntityGenerator:
 		#model_file.write('from collections import Counter\n\n')
 		model_file.write('class ' + self.__entity.getName() + ':\n')
 		model_file.write('\tdef __init__(self):\n')
-		model_file.write('\t\tself.__id = {\"_id\" : 0}\n')
+		model_file.write('\t\tself.__id = {\'_id\': -1}\n')
 		model_file.write('\t\tself.__data = {')
 		
 	def _generateModelData(self, model_file):
 		#if (self.__entity.getIsPrimaryKey()):
-			#model_file.write('\"_id\" : 0, ')
+			#model_file.write('\'_id\' : 0, ')
 
 		for p in self.__entity.getIntProperties():
-			model_file.write('\"' + p + '\" : 0,')
+			model_file.write('\'' + p + '\': 0, ')
 			
 		for p in self.__entity.getFloatProperties():
-			model_file.write('\"' + p + '\" : 0.0, ')
+			model_file.write('\'' + p + '\': 0.0, ')
 			
 		for p in self.__entity.getStringProperties():
-			model_file.write('\"' + p + '\" : \"\", ')
+			model_file.write('\'' + p + '\': \'\', ')
 			
 		for p in self.__entity.getBoolProperties():
-			model_file.write('\"' + p + '\" : False, ')
+			model_file.write('\'' + p + '\': False, ')
 			
 		for p in self.__entity.getListProperties():
-			model_file.write('\"' + p + '\" : [], ')
+			model_file.write('\'' + p + '\': [], ')
 			
 		model_file.write('}\n\n')
 		
@@ -66,6 +66,9 @@ class EntityGenerator:
 		
 		model_file.write('\tdef setField(self, token, value):\n')
 		model_file.write('\t\tself.__data[token] = value\n\n')
+
+		model_file.write('\tdef appendData(self, key, value):\n')
+		model_file.write('\t\tself.__data = dict(self.__data, **({key : value}))\n\n')
 		
 		#if (self.__entity.getIsPrimaryKey() and self.__entity.getIsAuto()):
 			#model_file.write('\n\n\tdef getId(self):\n\t\treturn self.__data[\'_id\']')
@@ -102,6 +105,10 @@ class EntityGenerator:
 			model_file.write('\t\tself.__data[\'' + p + '\'] = ' + p + '\n\n')
 			
 		for p in self.__entity.getListProperties():
+			model_file.write('\tdef get' + p + 's(self):\n')
+			model_file.write('\t\treturn self.__data[\'' + p + '\']\n\n')
+			model_file.write('\tdef set' + p + 's(self, ' + p + 's):\n')
+			model_file.write('\t\tself.__data[\'' + p + '\'] = ' + p + 's\n\n')
 			model_file.write('\tdef add' + p + '(self, ' + p + '):\n')
 			model_file.write('\t\tself.__data[\'' + p + '\'].append(' + p + ')\n\n')
 			model_file.write('\tdef remove' + p + '(self, index):\n')
@@ -109,5 +116,4 @@ class EntityGenerator:
 			model_file.write('\tdef get' + p + '(self, index):\n')
 			model_file.write('\t\treturn self.__data[\'' + p + '\'][index]\n\n')
 			model_file.write('\tdef set' + p + '(self, index, ' + p + '):\n')
-			model_file.write('\t\tself.__data[\'' + p + '\'][index] = ' + p + '\n\n')	
-	
+			model_file.write('\t\tself.__data[\'' + p + '\'][index] = ' + p + '\n\n')

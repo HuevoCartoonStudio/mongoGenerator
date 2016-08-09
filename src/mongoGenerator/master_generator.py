@@ -17,7 +17,7 @@ class MasterGenerator:
 		self._generateMaster()
 		
 	def _generateMaster(self):
-		model_file = open(self.__directory + "/DaoMaster.py", "wb")
+		model_file = open(self.__directory + "/" + self.__schema.getName() + "_DaoMaster.py", "wb")
 			
 		self._generateMasterHeader(model_file)
 		self._generateMasterSession(model_file)
@@ -26,7 +26,7 @@ class MasterGenerator:
 	
 	def _generateMasterHeader(self, model_file):
 		model_file.write('from pymongo import MongoClient')
-		model_file.write('\n\nfrom DaoSession import DaoSession')
+		model_file.write('\n\nfrom ' + self.__schema.getName() + '_DaoSession import DaoSession')
 		model_file.write('\n\nclass DaoMaster:')
 		model_file.write('\n\tdef __init__(self):')
 		model_file.write('\n\t\tself.__client = MongoClient(\'' + self.__address + '\')')

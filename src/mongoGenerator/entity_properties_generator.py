@@ -28,6 +28,7 @@ class EntityPropertiesGenerator:
     def _generateModelData(self, model_file):
         # if (self.__entity.getIsPrimaryKey()):
         # model_file.write('\"_id\" : 0, ')
+        model_file.write('\t\tself.Id = \'_id\'\n')
 
         for p in self.__entity.getIntProperties():
             model_file.write('\t\tself.' + p + ' = \'' + p + '\'\n')

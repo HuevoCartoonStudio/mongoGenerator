@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/mongoGenerator" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/model/testMongoGen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/model/testMongoAppend" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
