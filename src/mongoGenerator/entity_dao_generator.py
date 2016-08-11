@@ -22,7 +22,8 @@ class EntityDaoGenerator:
 	
 	def _generateModelDaoHeader(self, model_dao_file):
 		model_dao_file.write('import pymongo\n')
-		model_dao_file.write('from pymongo import MongoClient\n\n')
+		model_dao_file.write('from pymongo import MongoClient\n')
+		model_dao_file.write('from itertools import izip\n\n')
 		model_dao_file.write('from '  + self.__entity.getName() +  ' import ' + self.__entity.getName() + '\n\n')
 		model_dao_file.write('from '  + self.__entity.getName() +  'Properties import ' + self.__entity.getName() + 'Properties\n\n')
 		model_dao_file.write('class ' + self.__entity.getName() + 'Dao:\n')
@@ -79,11 +80,36 @@ class EntityDaoGenerator:
 		model_dao_file.write('\tdef readOneByProperty(self, propertie, value):\n')
 		model_dao_file.write('\t\treturn self.readOne({propertie:value})\n\n')
 
+		model_dao_file.write('\tdef readOneByProperties(self, *args):\n')
+		model_dao_file.write('\t\ti = iter(args)\n')
+		model_dao_file.write('\t\treturn self.readOne(dict(izip(i, i)))\n\n')
+
 		model_dao_file.write('\tdef readCollectionByProperty(self, property, value):\n')
 		model_dao_file.write('\t\treturn self.readCollection({property: value})\n\n')
 
-		model_dao_file.write('\tdef readByPropertyValues(self, property, values):\n')
+		model_dao_file.write('\tdef readByPropertyInValues(self, property, values):\n')
 		model_dao_file.write('\t\treturn self.readCollection({property: {\'$in\': values}})\n\n')
+
+		model_dao_file.write('\tdef readByPropertyNinValues(self, property, values):\n')
+		model_dao_file.write('\t\treturn self.readCollection({property: {\'$nin\': values}})\n\n')
+
+		model_dao_file.write('\tdef readByPropertyGtValue(self, property, value):\n')
+		model_dao_file.write('\t\treturn self.readCollection({property: {\'$gt\': value}})\n\n')
+
+		model_dao_file.write('\tdef readByPropertyGteValue(self, property, value):\n')
+		model_dao_file.write('\t\treturn self.readCollection({property: {\'$gte\': value}})\n\n')
+
+		model_dao_file.write('\tdef readByPropertyLteValue(self, property, value):\n')
+		model_dao_file.write('\t\treturn self.readCollection({property: {\'$lte\': value}})\n\n')
+
+		model_dao_file.write('\tdef readByPropertyLtValue(self, property, value):\n')
+		model_dao_file.write('\t\treturn self.readCollection({property: {\'$lt\': value}})\n\n')
+
+		model_dao_file.write('\tdef readByPropertyNeValue(self, property, value):\n')
+		model_dao_file.write('\t\treturn self.readCollection({property: {\'$ne\': value}})\n\n')
+
+		model_dao_file.write('\tdef readByPropertyGtValueLtValue(self, property, value1, value2):\n')
+		model_dao_file.write('\t\treturn self.readCollection({property: {\'$gt\': value1, \'$lt\': value2}})\n\n')
 
 		model_dao_file.write('\tdef readRandom(self):\n')
 		model_dao_file.write('\t\ttemp = self.__table.find_one()\n')

@@ -9,6 +9,8 @@ from ItemsDao import ItemsDao
 
 from random import randint
 
+import datetime
+
 if __name__ == "__main__":
 	dao_master = DaoMaster()
 	dao_session = dao_master.getSession()
@@ -18,11 +20,27 @@ if __name__ == "__main__":
 	catalog_status_type_dao = dao_session.getCatalogStatusTypeDao()
 	users_dao = dao_session.getUsersDao()
 
+	x = datetime.datetime.now()
+
 	super_asset = items_dao.readOneByProperty(items_dao.Properties.Name, 'SuperAsset_333')
 	print(super_asset.getAssetSubscriptions())
-	list_assets = items_dao.readByPropertyValues(items_dao.Properties.Id, super_asset.getAssetSubscriptions())
+	list_assets = items_dao.readByPropertyInValues(items_dao.Properties.Id, super_asset.getAssetSubscriptions())
 	for la in list_assets:
 		print (la.getName())
-		list_items = items_dao.readByPropertyValues(items_dao.Properties.Id, la.getItemSubscriptions())
+		list_items = items_dao.readByPropertyInValues(items_dao.Properties.Id, la.getItemSubscriptions())
 		for li in list_items:
 			print ('\t' + li.getName())
+			print (li.getDateTime().month)
+
+	list_assets = items_dao.readOneByProperty(items_dao.Properties.DateTime, super_asset.getDateTime())
+	print(list_assets.getName())
+
+	itemtemp = items_dao.readOneByProperties(items_dao.Properties.Name, 'Item4', items_dao.Properties.Class, 1)
+	print (itemtemp.getName())
+
+	# x = datetime.datetime.now()
+	# y = datetime.datetime.now()
+	# print (x)
+	# print (y)
+    #
+	# print (x < y)

@@ -24,6 +24,7 @@ class ModelGenerator:
         memTemplate.addStringProperty('Class')
         memTemplate.addStringProperty('Name')
         memTemplate.addStringProperty('Path')
+        memTemplate.addStringProperty('DateTime')
         memTemplate.addIntProperty('Type')
         memTemplate.addIntProperty('Format')
         memTemplate.addIntProperty('Status')
@@ -53,6 +54,11 @@ class ModelGenerator:
         memTemplate.addBoolProperty('IsActive')
 
         #######################################################################################
+
+        asset_template = schema.addEntity('CatalogClassType')
+        asset_template.addIdProperty(is_auto=False)
+        asset_template.addStringProperty('ClassType')
+        # asset_template.addIntProperty('Code')
 
         asset_template = schema.addEntity('CatalogItemType')
         asset_template.addIdProperty(is_auto=False)

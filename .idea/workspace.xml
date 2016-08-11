@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c47333e5-f886-417a-bcc6-61b99260aff0" name="Default" comment="PyCharm Project">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main_catalog_complex_type_creator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main_catalog_format_type_creator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main_catalog_item_types_creator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main_catalog_status_type_creator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main_testMongoGen_items_test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/mongoGenerator.iml" afterPath="$PROJECT_DIR$/.idea/mongoGenerator.iml" />
+    <list default="true" id="c47333e5-f886-417a-bcc6-61b99260aff0" name="Default" comment=")">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main_asset_manager_test.py" afterPath="$PROJECT_DIR$/src/main_asset_manager_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main_query.py" afterPath="$PROJECT_DIR$/src/main_query.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main_testMongoGen_assets_test.py" afterPath="$PROJECT_DIR$/src/main_testMongoGen_assets_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main_testMongoGen_generator.py" afterPath="$PROJECT_DIR$/src/main_testMongoGen_generator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main_testMongoGen_items_test.py" afterPath="$PROJECT_DIR$/src/main_testMongoGen_items_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main_testMongoGen_superassets_test.py" afterPath="$PROJECT_DIR$/src/main_testMongoGen_superassets_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mongoGenerator/entity_dao_generator.py" afterPath="$PROJECT_DIR$/src/mongoGenerator/entity_dao_generator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mongoGenerator/entity_generator.py" afterPath="$PROJECT_DIR$/src/mongoGenerator/entity_generator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mongoGenerator/entity_properties_generator.py" afterPath="$PROJECT_DIR$/src/mongoGenerator/entity_properties_generator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mongoGenerator/master_generator.py" afterPath="$PROJECT_DIR$/src/mongoGenerator/master_generator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mongoGenerator/session_generator.py" afterPath="$PROJECT_DIR$/src/mongoGenerator/session_generator.py" />
     </list>
     <ignored path="mongoGenerator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,59 +31,55 @@
       <file leaf-file-name="main_testMongoGen_generator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main_testMongoGen_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+            <state relative-caret-position="252">
+              <caret line="60" column="47" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="entity_generator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mongoGenerator/entity_generator.py">
+      <file leaf-file-name="main_catalog_class_types_creator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main_catalog_class_types_creator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="109" column="49" selection-start-line="109" selection-start-column="49" selection-end-line="109" selection-end-column="49" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="entity_properties_generator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mongoGenerator/entity_properties_generator.py">
+      <file leaf-file-name="UsersDao.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/UsersDao.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+            <state relative-caret-position="452">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_testMongoGen_assets_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main_testMongoGen_assets_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_testMongoGen_superassets_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main_testMongoGen_superassets_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="57" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_query.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main_query.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main_query.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="20" column="88" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="88" />
-              <folding />
+            <state relative-caret-position="298">
+              <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemsDao.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/ItemsDao.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,8 +87,18 @@
       <file leaf-file-name="Items.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/Items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="191" column="8" selection-start-line="191" selection-start-column="8" selection-end-line="191" selection-end-column="8" />
+            <state relative-caret-position="814">
+              <caret line="197" column="8" selection-start-line="197" selection-start-column="8" selection-end-line="197" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemsProperties.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/ItemsProperties.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,30 +107,8 @@
       <file leaf-file-name="entity_dao_generator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mongoGenerator/entity_dao_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemsDao.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/ItemsDao.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemsProperties.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/ItemsProperties.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+            <state relative-caret-position="216">
+              <caret line="82" column="69" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -171,24 +149,26 @@
         <option value="$PROJECT_DIR$/src/main_testMongogen_test.py" />
         <option value="$PROJECT_DIR$/src/main_catalog_status_type_creator.py" />
         <option value="$PROJECT_DIR$/src/main_catalog_complex_type_creator.py" />
-        <option value="$PROJECT_DIR$/src/test/model/testMongoGen/UsersDao.py" />
         <option value="$PROJECT_DIR$/src/main_catalogs_generator.py" />
         <option value="$PROJECT_DIR$/src/main_catalog_item_types_creator.py" />
         <option value="$PROJECT_DIR$/src/main_catalog_format_type_creator.py" />
         <option value="$PROJECT_DIR$/src/main_department_creator.py" />
         <option value="$PROJECT_DIR$/src/test/model/testMongoGen/Users.py" />
         <option value="$PROJECT_DIR$/src/main_users_creator.py" />
-        <option value="$PROJECT_DIR$/src/main_testMongoGen_generator.py" />
         <option value="$PROJECT_DIR$/src/main_testMongoGen_test.py" />
-        <option value="$PROJECT_DIR$/src/main_testMongoGen_assets_test.py" />
-        <option value="$PROJECT_DIR$/src/main_testMongoGen_items_test.py" />
-        <option value="$PROJECT_DIR$/src/main_testMongoGen_superassets_test.py" />
-        <option value="$PROJECT_DIR$/src/test/model/testMongoGen/ItemsDao.py" />
         <option value="$PROJECT_DIR$/src/test/model/testMongoGen/Items.py" />
-        <option value="$PROJECT_DIR$/src/mongoGenerator/entity_dao_generator.py" />
         <option value="$PROJECT_DIR$/src/mongoGenerator/entity_properties_generator.py" />
         <option value="$PROJECT_DIR$/src/mongoGenerator/entity_generator.py" />
+        <option value="$PROJECT_DIR$/src/main_testMongoGen_items_test.py" />
+        <option value="$PROJECT_DIR$/src/main_testMongoGen_assets_test.py" />
+        <option value="$PROJECT_DIR$/src/main_testMongoGen_superassets_test.py" />
+        <option value="$PROJECT_DIR$/src/test/model/testMongoGen/UsersDao.py" />
+        <option value="$PROJECT_DIR$/src/main_testMongoGen_generator.py" />
+        <option value="$PROJECT_DIR$/src/main_catalog_class_types_creator.py" />
+        <option value="$PROJECT_DIR$/src/test/model/testMongoGen/ItemsProperties.py" />
         <option value="$PROJECT_DIR$/src/main_query.py" />
+        <option value="$PROJECT_DIR$/src/test/model/testMongoGen/ItemsDao.py" />
+        <option value="$PROJECT_DIR$/src/mongoGenerator/entity_dao_generator.py" />
       </list>
     </option>
   </component>
@@ -223,7 +203,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -311,6 +290,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,7 +303,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main_query">
+  <component name="RunManager" selected="Python.main_testMongoGen_generator">
     <configuration default="false" name="main_testMongoGen_generator" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -337,23 +317,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="mongoGenerator" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main_testMongoGen_generator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="main_testMongoGen_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mongoGenerator" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main_testMongoGen_items_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -405,6 +368,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="mongoGenerator" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main_query.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="main_catalog_class_types_creator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mongoGenerator" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main_catalog_class_types_creator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -545,18 +525,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.main_testMongoGen_generator" />
-      <item index="1" class="java.lang.String" itemvalue="Python.main_testMongoGen_test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.main_testMongoGen_assets_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.main_testMongoGen_superassets_test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.main_query" />
+      <item index="1" class="java.lang.String" itemvalue="Python.main_testMongoGen_assets_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.main_testMongoGen_superassets_test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.main_query" />
+      <item index="4" class="java.lang.String" itemvalue="Python.main_catalog_class_types_creator" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main_query" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main_testMongoGen_generator" />
-        <item index="2" class="java.lang.String" itemvalue="Python.main_testMongoGen_superassets_test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.main_testMongoGen_assets_test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.main_testMongoGen_test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main_testMongoGen_generator" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main_query" />
+        <item index="2" class="java.lang.String" itemvalue="Python.main_catalog_class_types_creator" />
+        <item index="3" class="java.lang.String" itemvalue="Python.main_testMongoGen_superassets_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.main_testMongoGen_assets_test" />
       </list>
     </recent_temporary>
   </component>
@@ -598,7 +578,6 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992035" sideWeight="0.5057143" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -611,6 +590,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -635,13 +615,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mongoGenerator/session_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mongoGenerator/master_generator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -653,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,7 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -695,13 +666,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/SuperAssetsProperties.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/SuperAssetsProperties.py" />
     <entry file="file://$PROJECT_DIR$/src/test/model/testMongoAppend/Items.py" />
     <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/DaoMaster.py" />
     <entry file="file://$PROJECT_DIR$/src/mongoGenerator/dao_master_generator.py">
@@ -765,19 +730,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/Assets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/Assets.py" />
     <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/CatalogFormatType.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -785,7 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="29" column="19" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -797,19 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/UsersDao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-142">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main_catalogs_generator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -817,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -825,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -833,10 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
           <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-            <marker date="1470763487938" expanded="true" signature="116:2246" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -844,9 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -854,9 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -864,7 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,7 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
           <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,35 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main_testMongoGen_items_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main_testMongoGen_assets_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main_testMongoGen_superassets_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="57" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -920,68 +824,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mongoGenerator/entity_dao_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mongoGenerator/entity_properties_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="540">
           <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/ItemsProperties.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/ItemsDao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mongoGenerator/entity_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
+        <state relative-caret-position="1962">
           <caret line="109" column="49" selection-start-line="109" selection-start-column="49" selection-end-line="109" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main_testMongoGen_generator.py">
+    <entry file="file://$PROJECT_DIR$/src/main_testMongoGen_items_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        <state relative-caret-position="114">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main_testMongoGen_assets_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main_testMongoGen_superassets_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main_catalog_class_types_creator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/ItemsProperties.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/Items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="191" column="8" selection-start-line="191" selection-start-column="8" selection-end-line="191" selection-end-column="8" />
+        <state relative-caret-position="814">
+          <caret line="197" column="8" selection-start-line="197" selection-start-column="8" selection-end-line="197" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main_query.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="20" column="88" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="88" />
+        <state relative-caret-position="298">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/ItemsDao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mongoGenerator/entity_dao_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="82" column="69" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main_testMongoGen_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="60" column="47" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/model/testMongoGen/UsersDao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>

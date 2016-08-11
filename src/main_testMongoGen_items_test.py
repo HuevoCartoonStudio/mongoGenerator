@@ -1,4 +1,6 @@
 import sys
+import datetime
+import time
 
 from testMongoGen_DaoMaster import DaoMaster
 from testMongoGen_DaoSession import DaoSession
@@ -28,11 +30,13 @@ if __name__ == "__main__":
 	number_items = 10000
 
 	for j in range(number_items):
+		time.sleep(0.001)
 		item_item = Items()
 		# item_item.setId(i)
 		item_item.setClass(0)
 		item_item.setName('Item_' + str(j))
 		item_item.setPath('Path_' + str(j))
+		item_item.setDateTime(datetime.datetime.now())
 		item_item.setType(list_it_types[randint(0, len(list_it_types) - 1)].getId())
 		item_item.setFormat(randint(0, len(format_type.getField(list_it_types[item_item.getType()].getItemType())) - 1))
 		item_item.setStatus(list_catalog_status_type[randint(0, len(list_catalog_status_type) - 1)].getId())
